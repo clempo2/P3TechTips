@@ -109,7 +109,27 @@ You can resume execution by clicking Continue.
 
 Click the stop icon (red square) or select Debug > Stop Debugging to stop debugging Unity.
 
-7) P3 Discord Group
+7) Install Code Snippets
+This is optional. Code snippets are templates that help inserting common code fragments. Michael Ocean has provided a collection of code snippets to simplify the development of P3 applications.
+
+Create the directory c:\P3\CodeSnippets\P3
+Download all the files with the .snippet extension from here: https://discord.com/channels/730055502557610004/1100893730820587711
+and save them in c:\P3\CodeSnippets\P3
+Note: the files with the .code-snippets are for Visual Studio Code which is not compatible with Visual Studio 2017.
+
+To import the code snippets, select Tools > Code Snippet Manager in the main menu of Visual Studio.
+Change the Language to CSharp.
+Click Add
+Navigate to C:\P3\CodeSnippets, select the P3 directory and click Select Folder.
+You can see the code snippets have been imported by expanding the P3 folder.
+Click OK to close the Code Snippet Manager.
+
+To insert a snippet, choose one of these ways:
+- Select Edit > IntelliSense -> Insert Snippet
+- Right-click in the code editor, select Snippet > Insert Snippet
+- Press Ctrl+K,Ctrl-X
+
+8) P3 Discord Group
 Join the P3 Community Discord at https://discord.gg/GuKGcaDkjd
 You can ask your questions in the dev-forum under the 3RD PARTY DEVELOPMENT section.
 
@@ -118,23 +138,23 @@ You can ask your questions in the dev-forum under the 3RD PARTY DEVELOPMENT sect
 To manage the source of your project, we recommend using git.
 This is optional.
 
-8) Git
+9) Git
 Download git for Windows at https://gitforwindows.org/ and run the installer.
 Keep all default options, except I like to have the Unix-like utilities in the DOS shell.
 The installer says that will override Windows find and sort, but that's not true at version 2.40.1
 The utilities were last in the PATH.
 
-9) GitHub
+10) GitHub
 Sign up for github.com
 You can now sign in to the GitHub website using your email and password.
 
-10) Download from GitHub
+11) Download from GitHub
 Clone a repository like P3EmptyGame
 In a command prompt on Windows:
 cd \P3
 git clone https://github.com/clempo2/P3EmptyGame.git
 You do not need to authenticate to clone public repositories.
 
-11) GitHub Private Repositories
+12) GitHub Private Repositories
 To use the git command line with GitHub private repositories (like your own repositories), you need to authenticate with a Personal Access Token. For security reasons, the regular GitHub password will not work. See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token. Follow the instructions in the section: Creating a personal access token (classic)
 The first time you clone a private repository with the git command line, a dialog will popup prompting you to sign in. Select the Token tab, enter the Personal Access Token you created. After you authenticate, the git command will continue normally. The Personal Access Token is remembered, you do not have to enter it every time.
