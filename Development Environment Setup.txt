@@ -110,10 +110,13 @@ You can resume execution by clicking Continue.
 Click the stop icon (red square) or select Debug > Stop Debugging to stop debugging Unity.
 
 7) Install Code Snippets
-This is optional. Code snippets are templates that help inserting common code fragments. Michael Ocean has provided a collection of code snippets to simplify the development of P3 applications.
+This is optional.
+Code snippets are templates that help inserting common code fragments.
+Michael Ocean has provided a collection of code snippets to simplify the development of P3 applications.
 
 Create the directory c:\P3\CodeSnippets\P3
-Download all the files with the .snippet extension from here: https://discord.com/channels/730055502557610004/1100893730820587711
+Download all the files with the .snippet extension from here:
+https://discord.com/channels/730055502557610004/1100893730820587711
 and save them in c:\P3\CodeSnippets\P3
 Note: the files with the .code-snippets are for Visual Studio Code which is not compatible with Visual Studio 2017.
 
@@ -156,5 +159,11 @@ git clone https://github.com/clempo2/P3EmptyGame.git
 You do not need to authenticate to clone public repositories.
 
 12) GitHub Private Repositories
-To use the git command line with GitHub private repositories (like your own repositories), you need to authenticate with a Personal Access Token. For security reasons, the regular GitHub password will not work. See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token. Follow the instructions in the section: Creating a personal access token (classic)
-The first time you clone a private repository with the git command line, a dialog will popup prompting you to sign in. Select the Token tab, enter the Personal Access Token you created. After you authenticate, the git command will continue normally. The Personal Access Token is remembered, you do not have to enter it every time.
+To use the git command line with GitHub private repositories (like your own repositories), you need to
+authenticate with a Personal Access Token. For security reasons, the regular GitHub password will not work.
+See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token 
+Follow the instructions in the section: Creating a personal access token (classic)
+The first time you clone a private repository with the git command line, a dialog will popup prompting
+you to sign in. Select the Token tab, enter the Personal Access Token you created.
+After you authenticate, the git command will continue normally.
+The Personal Access Token is remembered, you do not have to enter it every time.
