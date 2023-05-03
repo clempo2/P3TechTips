@@ -1,0 +1,140 @@
+This tutorial shows how to setup your initial development environment for developing apps on the Multimorphic P3 Platform.
+
+1) P3 SDK
+The P3 Development Environment currently only runs on Windows.
+Sign in to multimorphic.com, you can sign up for free
+Download the P3 SDK from https://www.multimorphic.com/support/projects/customer-support/wiki/3rd-Party_Development_Kit
+Extract the SDK, for example in C:\P3, this will create C:\P3\P3_SDK_V0.8
+Open C:\P3\P3_SDK_V0.8\P3SampleApp\Documentation\html\index.html in your browser and read the documentation.
+The Getting Started section is a good starting point.
+
+2) Copy the .multimorphic Directory
+Copy c:\P3\P3_SDK_V0.8\.multimorphic to your user home directory
+On Windows, that will be %HOMEDRIVE%%HOMEPATH%
+You can type that expression as is in Windows File Explorer address bar.
+For example, %HOMEDRIVE%%HOMEPATH% might expand to c:\Users\johnsmith
+
+2) Unity 5.6.7
+The P3 SDK requires Unity 5.6.7. A newer version of Unity will not work.
+We recommend to use Visual Studio 2017 with Unity 5.6.7
+There are issues if you try to integrate Unity 5.6.7 with newer versions of Visual Studio.
+Download Unity 5.6.7 for Windows at https://unity.com/releases/editor/archive
+Choose Downloads (Win) > Unity Installer
+Run the installer
+When asked to Choose Components:
+   keep the defaults
+   plus select Linux Build Support (that is needed to build a P3 package for deployment to the P3 machine)
+   and select Microsoft Visual Studio Community 2017 (if not already installed)
+
+3) Create your Unity ID
+Visit unity.com, click on the silhouette in the top right corner and select Create a Unity ID
+
+4) Launch Unity
+Login with your Unity ID
+If the firewall pops up, allow access to your private network.
+On the first execution, select Unity Personal for the free version
+The organization you represent must not make more than $100K in revenue to use the free version.
+Click Open in the top right corner.
+Navigate to c:\P3\P3_SDK_V0.8, select P3SampleApp, click Select Folder.
+It will take a while the first time the project is loaded. Unity has to import all the assets.
+The next time the project is loaded will be much faster.
+The Project window should be in the lower left corner, if not, select Window > Layouts > Default in the main menu.
+In the Project window, select Scenes.
+Double-click the Bootstrap scene to load it in the editor.
+Click the play button (triangle icon).
+
+NOTE: If all you see is a blue sky over grey ground, you have not selected a scene yet.
+Double-click on the Bootstrap scene to load it.
+
+NOTE: If you get weird errors, verify you selected the Bootstrap scene, and not the Attract or Home scene.
+
+It will say: Unable to Read Certificate, that's normal when running in the simulator.
+The scene is zoomed in, to zoom out, in the top left corner of the scene view, click on Free Aspect, select Standalone
+
+Press s to start a game
+Press l (lowercase L) to launch a ball
+Drag the left mouse button to move the ball
+Press 0 (zero) to drain
+Press [ to change the volume
+Press [ and l (lowercase L) to open the service menu
+Press a for the left flipper (navigate left)
+Press ; for the right flipper (navigate right)
+Press l (lowercase L) to confirm
+
+In the top left corner of the scene view, click Display 1 then select Display 2 to see the backbox display (static image on P3SampleApp)
+Click Display 2 then select Display 8 to see the LED simulator
+Click Display 8 then select Display 1 to go back to the playfield view.
+
+5) Visual Studio 2017 Tools for Unity
+If you installed Visual Studio 2017 through the Unity installer, this step is already taken care of, skip to the next step.
+If you installed Visual Studio 2017 separately, you will have to integrate Unity with Visual Studio manually.
+
+In Unity, select Edit > Preferences in the main menu
+Click External Tools in the left menu
+Click to the right of External Script Editor, in the dropdown, select Visual Studio 2017 (Community Edition)
+If you don't see it, select Browse, and select the Visual Studio 2017 integrated environment executable.
+For example, navigate to "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE" and select devenv.exe
+Click Open to finish your selection.
+External Script Editor now says: Visual Studio 2017
+Make sure the Editor Attaching option is selected
+
+Launch Visual Studio 2017.
+In Visual Studio 2017, select Tools > Extensions and Updates in the main menu.
+In the search box, type Tools for Unity.
+Install Visual Studio 2017 Tools for Unity if not already installed.
+
+6) Visual Studio Integration Walkthrough
+In Unity, in the Project window, expand Scripts and select Modes.
+Double-click on P3SABaseGameMode.cs
+Visual Studio 2017 will launch automatically.
+If it asks you to sign in, click Not now, maybe later.
+If the firewall pops up, allow access to your private network.
+
+In the editor window of P3SaBaseGameMode, right-click the constructor:
+   public P3SABaseGameMode (P3Controller controller)
+and select Breakpoint > Insert breakpoint
+
+Make sure the game is not playing in Unity.
+If the game is playing, click the Play button to stop it.
+This is to make sure you hit the breakpoint which occurs at the start of the game.
+
+Back in Visual Studio, click "Attach to Unity" in the toolbar.
+
+In Unity, click the Play button to start the game.
+The game will be stopped at the breakpoint.
+You can inspect variables in the lower left window.
+You can inspect the Call Stack in the lower right window.
+You can single step using the toolbar icons or the Debug menu.
+You can resume execution by clicking Continue.
+
+Click the stop icon (red square) or select Debug > Stop Debugging to stop debugging Unity.
+
+7) P3 Discord Group
+Join the P3 Community Discord at https://discord.gg/GuKGcaDkjd
+You can ask your questions in the dev-forum under the 3RD PARTY DEVELOPMENT section.
+
+=======================================================================================
+
+To manage the source of your project, we recommend using git.
+This is optional.
+
+8) Git
+Download git for Windows at https://gitforwindows.org/ and run the installer.
+Keep all default options, except I like to have the Unix-like utilities in the DOS shell.
+The installer says that will override Windows find and sort, but that's not true at version 2.40.1
+The utilities were last in the PATH.
+
+9) GitHub
+Sign up for github.com
+You can now sign in to the GitHub website using your email and password.
+
+10) Download from GitHub
+Clone a repository like P3EmptyGame
+In a command prompt on Windows:
+cd \P3
+git clone https://github.com/clempo2/P3EmptyGame.git
+You do not need to authenticate to clone public repositories.
+
+11) GitHub Private Repositories
+To use the git command line with GitHub private repositories (like your own repositories), you need to authenticate with a Personal Access Token. For security reasons, the regular GitHub password will not work. See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token. Follow the instructions in the section: Creating a personal access token (classic)
+The first time you clone a private repository with the git command line, a dialog will popup prompting you to sign in. Select the Token tab, enter the Personal Access Token you created. After you authenticate, the git command will continue normally. The Personal Access Token is remembered, you do not have to enter it every time.
