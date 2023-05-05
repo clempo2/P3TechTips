@@ -1,8 +1,6 @@
 # P3TechTips
-Technical tips for the Multimorphic P3 Platform
-
-- [Development Environment Setup](https://clempo2.github.io/P3TechTips/P3DevelopmentEnvironmentSetup.html)
-  How to install the SDK and the tools you need for development
+Technical tips for the Multimorphic P3 Platform  
+Access the site [here](https://clempo2.github.io/P3TechTips/P3DevelopmentEnvironmentSetup.html)
 
 ## Support
 
