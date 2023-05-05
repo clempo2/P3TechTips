@@ -1,6 +1,6 @@
 # P3TechTips
 Technical tips for the Multimorphic P3 Platform  
-Access the site [here](https://clempo2.github.io/P3TechTips/P3DevelopmentEnvironmentSetup.html)
+Access the site [here](https://clempo2.github.io/P3TechTips/index.html)
 
 ## Support
 
