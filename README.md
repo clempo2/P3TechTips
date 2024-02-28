@@ -10,4 +10,4 @@ You can discuss these P3 Technical Tips and other P3 Development topics on the [
 
 ## License
 
-Copyright (c) 2023 Clement Pellerin. All Rights Reserved.
+Copyright (c) 2023-2024 Clement Pellerin. All Rights Reserved.
