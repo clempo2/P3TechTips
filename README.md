@@ -10,4 +10,7 @@ You can discuss these P3 Technical Tips and other P3 Development topics on the [
 
 ## License
 
-Copyright (c) 2023-2024 Clement Pellerin. All Rights Reserved.
+Except as otherwise noted, the content of P3TechTips is  
+Copyright (c) 2023-2026 Clement Pellerin. All Rights Reserved.
+
+Code samples are licensed under the [MIT License](LICENSE_CODE.txt).
